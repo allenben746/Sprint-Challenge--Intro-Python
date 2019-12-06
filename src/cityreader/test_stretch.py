@@ -1,5 +1,5 @@
 import unittest
-from cityreader import City, cityreader, cityreader_stretch
+from cityreader import City, cityreader
 
 def check_city(inp, exp):
     if inp.name != exp.name:
@@ -80,7 +80,7 @@ class CityreaderTests(unittest.TestCase):
       City("Louisville", 38.1662,-85.6488)
     ]
 
-    inp = cityreader_stretch(40, -50, 12, -120, self.cities)
+    # inp = cityreader_stretch(40, -50, 12, -120, self.cities)
 
     for i in range(len(inp)):
       self.assertTrue(check_city(inp[i], expected[i]))
